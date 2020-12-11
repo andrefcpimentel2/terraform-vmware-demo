@@ -1,5 +1,6 @@
 module "vmware_linux_vm" {
-  source            = "./modules/terraform-vmware-linux"
+  source            = "app.terraform.io/Hashicorp-neh-Demo/linux/vmware"
+  version           = "2.0.0"
   vmtemp            = var.vmtemp
   instances         = var.instances
   vmname            = var.vmname
