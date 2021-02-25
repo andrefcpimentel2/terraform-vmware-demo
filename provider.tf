@@ -1,4 +1,8 @@
-provider "nsxt" {
-  versions = "=3.1.1"
-  source = "vmware/nsxt"
+terraform {
+  required_providers {
+    nsxt = {
+      source  = "vmware/nsxt"
+      version = "=3.1.1"
+    }
+  }
 }
