@@ -1,5 +1,5 @@
 module "vmware_linux_vm" {
-  source            = "ptferhel.my-v-world.fr/Hashicorp-neh/linux/vmware"
+  source            = "localterraform.com/Hashicorp-neh/linux/vmware"
   version           = "2.0.0"
   vmtemp            = var.vmtemp
   instances         = var.instances
