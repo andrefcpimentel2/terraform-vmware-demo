@@ -2,6 +2,7 @@ module "vmware_linux_vm" {
   source  = "app.terraform.io/Hashicorp-neh-Demo/linux/vmware"
   version           = "2.0.1"
   vmtemp            = var.vmtemp
+  storage_policy    = var.storage_policy
   instances         = var.instances
   vmname            = var.vmname
   vmrp              = var.vmrp
