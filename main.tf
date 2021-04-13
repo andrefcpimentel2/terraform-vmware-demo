@@ -1,5 +1,5 @@
 module "vmware_linux_vm" {
-  source  = "app.terraform.io/Hashicorp-neh-Demo/linux/vmware"
+  source  = "app.terraform.io/emea-se-playground-2019/linux/vmware"
   version           = "2.0.3"
   vmtemp            = var.vmtemp
   storage_policy_name    = var.storage_policy_name
