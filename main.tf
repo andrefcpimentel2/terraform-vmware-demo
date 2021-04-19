@@ -1,5 +1,5 @@
 module "vmware_linux_vm" {
-  source  = "app.terraform.io/emea-se-playground-2019/linux/vmware"
+  source  = "https://github.com/andrefcpimentel2/terraform-vmware-linux.git"
   version           = "2.0.3"
   vmtemp            = var.vmtemp
   storage_policy_name    = var.storage_policy_name
