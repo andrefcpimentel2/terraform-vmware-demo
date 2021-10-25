@@ -10,10 +10,12 @@ variable "vmnamesuffix" {
 
 variable "vmtemp" {
   description = "Name of the template available in the vSphere"
+  default     = "CentOS7_Template"
 }
 
 variable "storage_policy_name" {
   description = "Name of the Storage Policy used in the vSphere"
+  default     = "vSAN Default Storage Policy"
 }
 
 variable "data_disk_size_gb" {
@@ -44,6 +46,7 @@ variable "ram_size" {
 
 variable "vlan" {
   description = "(Required)VLAN name where the VM should be deployed"
+  default     = "INTERNAL"
 }
 
 variable "ipv4submask" {
@@ -54,7 +57,7 @@ variable "ipv4submask" {
 variable "ipaddress" {
   description = "host(VM) IP address in list format, support more than one IP. Should correspond to number of instances"
   type        = list(string)
-  default     = [""]
+  default     = ["192.168.0.24"]
 }
 
 variable "vmdomain" {
@@ -64,14 +67,17 @@ variable "vmdomain" {
 
 variable "dc" {
   description = "Name of the datacenter you want to deploy the VM to"
+  default     = "MYVWORLD"
 }
 
 variable "vmrp" {
   description = "Cluster resource pool that VM will be deployed to. you use following to choose default pool in the cluster (esxi1) or (Cluster)/Resources"
+  default     = "VSANCLUSTER01/Resources"
 }
 
 variable "ds" {
   description = "Datastore to deploy the VM."
+  default     = "vsanDatastore"
 }
 
 variable "vmfolder" {
@@ -80,20 +86,20 @@ variable "vmfolder" {
 
 variable "vmgateway" {
   description = "VM gateway to set during provisioning"
-  default     = ""
+  default     = "192.168.0.1"
 }
 
 variable "vmdns" {
   type    = list(string)
-  default = []
+  default = ["192.168.0.1"]
 }
 
 variable "tag_category" {
   description = "Used to name a tags' category on vCenter"
-  default     = ""
+  default     = "CREATED_BY"
 }
 
 variable "tag" {
   description = "Used to name a tag on vCenter"
-  default     = ""
+  default     = "TERRAFORM"
 }
